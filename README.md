@@ -4,10 +4,11 @@ The selected random weights for the next epoch should differ by at least 10% of 
 - The perturbed model is struggling to learn the patterns in the data, leading to a poor fit.
 
 Next Step:
-- Reduce perturbation scale and bounds
-- Experiment with other optimizers (gradients first)
-- Lower learning rate
+- get the basic baseline results regarding running time and see the metrics change (avg. loss, std. loss, and accuracy) for using only one/two hidden layers 
+- move the perturbation to restart another whole set of trial only.
 
+Goal:
+- need less running time to get a better/same result when using perturbation to a 2 or so hidden layers only.
 
 Future: 
 - Adaptive perturbation from larger scale to smaller scale
