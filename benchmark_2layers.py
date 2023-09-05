@@ -169,20 +169,11 @@ for trial in range(num_trials):
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.title('Train and Test Losses for All Trials')
-
-# Add legend with average metrics
 plt.legend() 
-
-# Add average metrics annotations with adjusted x-coordinates
-x_coord = 1.2  # Adjust the x-coordinate for better positioning
-plt.text(x_coord, avg_train_loss + 0.05, f'Avg Train Loss: {avg_train_loss:.4f}', color='black')
-plt.text(x_coord, avg_test_loss + 0.03, f'Avg Test Loss: {avg_test_loss:.4f}', color='gray')
-plt.text(x_coord, avg_accuracy - 0.03, f'Avg Accuracy: {avg_accuracy:.4f}', color='green')
-plt.text(x_coord, avg_std_train_loss - 0.05, f'Avg Std Train Loss: {avg_std_train_loss:.4f}', color='blue')
-plt.text(x_coord, avg_std_test_loss - 0.07, f'Avg Std Test Loss: {avg_std_test_loss:.4f}', color='orange')
-plt.tight_layout()  
-
-# Save the plot as an image file with higher resolution
+plt.text(1.2, 1.5, f'Avg Train Loss: {avg_train_loss:.4f}\n'
+         f'Avg Test Loss: {avg_test_loss:.4f}\n'
+         f'Avg Std Train Loss: {avg_std_train_loss:.4f}\n'
+         f'Avg Std Test Loss: {avg_std_test_loss:.4f}\n'
+         f'Avg Accuracy: {avg_accuracy:.4f}')
 plt.savefig('metrics_plot.png', dpi=300)
-
 plt.show()
