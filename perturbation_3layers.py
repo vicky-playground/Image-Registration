@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import copy
 import time
 import torch.optim as optim
+import numpy as np
 
 # Set device (GPU if available, else CPU)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -48,10 +49,11 @@ class ThreeLayerNet(nn.Module):
         out = self.relu(out)
         out = self.fc3(out)
         return out
-    
+
+
 # Training parameters
 num_trials = 5
-trial_epochs = 10
+trial_epochs = 5
 
 # Perturbation scale
 perturbation_scale = 0.1
@@ -81,7 +83,7 @@ for trial in range(num_trials):
     
     # Store loss values for plotting
     train_losses = []
-    test_losses = []  # Initialize test loss list for each trial
+    test_losses = []  
 
     start_trial_time = time.time()  # Record start time of trial
 
@@ -166,6 +168,24 @@ end_time = time.time()
 total_time = end_time - start_time
 print(f"Total time taken for all trials: {total_time:.2f} seconds")
 
+# Calculate average training and testing losses and accuracy
+avg_train_losses = [sum(metrics['train_losses']) / trial_epochs for metrics in trial_metrics]
+avg_test_losses = [sum(metrics['test_losses']) / trial_epochs for metrics in trial_metrics]
+avg_accuracies = [metrics['accuracy'] for metrics in trial_metrics]
+
+# Calculate average standard deviations of training and testing losses
+std_train_losses = [np.std(metrics['train_losses']) for metrics in trial_metrics]
+std_test_losses = [np.std(metrics['test_losses']) for metrics in trial_metrics]
+
+# Calculate and print average values
+avg_train_loss = sum(avg_train_losses) / num_trials
+avg_test_loss = sum(avg_test_losses) / num_trials
+avg_accuracy = sum(avg_accuracies) / num_trials
+
+# Calculate and print average standard deviations
+avg_std_train_loss = sum(std_train_losses) / num_trials
+avg_std_test_loss = sum(std_test_losses) / num_trials
+
 # Concatenate the losses from all trials
 all_train_losses = []
 all_test_losses = []
@@ -182,5 +202,20 @@ for trial in range(num_trials):
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.title('Train and Test Losses for All Trials')
-plt.legend()
+
+# Add legend with average metrics
+plt.legend() 
+
+# Add average metrics annotations with adjusted x-coordinates
+x_coord = 1.2  # Adjust the x-coordinate for better positioning
+plt.text(x_coord, avg_train_loss + 0.05, f'Avg Train Loss: {avg_train_loss:.4f}', color='black')
+plt.text(x_coord, avg_test_loss + 0.03, f'Avg Test Loss: {avg_test_loss:.4f}', color='gray')
+plt.text(x_coord, avg_accuracy - 0.03, f'Avg Accuracy: {avg_accuracy:.4f}', color='green')
+plt.text(x_coord, avg_std_train_loss - 0.05, f'Avg Std Train Loss: {avg_std_train_loss:.4f}', color='blue')
+plt.text(x_coord, avg_std_test_loss - 0.07, f'Avg Std Test Loss: {avg_std_test_loss:.4f}', color='orange')
+plt.tight_layout()  
+
+# Save the plot as an image file with higher resolution
+plt.savefig('metrics_plot.png', dpi=300)
+
 plt.show()
