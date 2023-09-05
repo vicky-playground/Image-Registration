@@ -1,13 +1,11 @@
-The selected random weights for the next epoch should differ by at least 10% of the distance between the output weights of the current epoch and the input weights used in the same epoch. These input weights are the ones without any perturbation. Additionally, the chosen random weights for the next epoch must fall within a certain range: [original input weights of the next epoch - distance, original input weights of the next epoch + distance]. If a random weight goes beyond this range, it will be adjusted to be exactly 10% of the calculated distance away from the original input weights of the next epoch, ensuring controlled and meaningful changes to the learning process.
+Sep. 4th:
 
-08/20: 
-- The perturbed model is struggling to learn the patterns in the data, leading to a poor fit.
-
-Next Step:
-- Reduce perturbation scale and bounds
-- Experiment with other optimizers (gradients first)
-- Lower learning rate
+- Define a neural network model with two and three hidden layers.
+- Set training parameters: number of epochs, number of trials, and number of epochs per trial.
+- Perturbation logic: Calculate the distance between the initial weights of the previous trial set and the final output weights. Multiply the scale (0.1) to create the +-perturbation range (upper bound and lower bound). After obtaining the upper bound and lower bound, add a new input weight for the next trial set by choosing a random value within the specified range.
 
 
-Future: 
-- Adaptive perturbation from larger scale to smaller scale
+`benchmark_2layers.py`: Total time taken for all trials: 225.48 seconds 
+`perturbation_2layers.py`: Total time taken for all trials: 234.42 seconds
+`benchmark_3layers.py`: Total time taken for all trials: 244.26 seconds 
+`perturbation_3layers.py`: Total time taken for all trials: 243.17 seconds   
