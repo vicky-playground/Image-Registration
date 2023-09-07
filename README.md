@@ -20,5 +20,5 @@ Summary:
 - The results are generally consistent between benchmark and perturbation experiments. This suggests that the introduced perturbations did not lead to significant changes in the overall model performance or behavior.
 
 Future: 
-- How many nodes? ; 1 layer & 5 layers; variability (quality)
+- How many nodes? ; 1 layer & 5 layers; variability (quality); 30 trials
 - Adaptive perturbation from larger scale to smaller scale
