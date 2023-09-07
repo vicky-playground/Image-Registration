@@ -13,5 +13,11 @@ Sep. 4th:
 - `benchmark_3layers.py`: Total time taken for all trials: 234.04 seconds; avg. accuracy: 0.5233; avg. train loss: 1.3799; avg. test loss: 1.4162; avg. std. train loss: 0.1580; avg. std. test loss: 0.0503
 - `perturbation_3layers.py`: Total time taken for all trials: 234.55 seconds; avg. accuracy: 0.5232; avg. train loss: 1.3837; avg. test loss: 1.4172; avg. std. train loss: 0.1579; avg. std. test loss: 0.0527 
 
+Summary:
+- The total time taken for all trials is slightly higher in the perturbation experiments.
+- For both benchmark and perturbation experiments, the 3-layer models exhibit slightly lower average train and test losses compared to the 2-layer models. 
+- The perturbation experiments show very minor changes in the metrics compared to the benchmark experiments. This indicates that the perturbations applied to the weights were relatively small and did not cause significant deviations in the training process.
+- The results are generally consistent between benchmark and perturbation experiments. This suggests that the introduced perturbations did not lead to significant changes in the overall model performance or behavior.
+
 Future: 
 - Adaptive perturbation from larger scale to smaller scale
