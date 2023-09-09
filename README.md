@@ -1,3 +1,6 @@
+Rules:
+- same random start points
+
 Goal:
 - need less running time to get a better/same result when using perturbation to a 2 or so hidden layers only.
 
