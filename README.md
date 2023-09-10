@@ -24,4 +24,5 @@ Summary:
 
 Future: 
 - How many nodes? ; 1 layer & 5 layers; variability (quality); 30 trials
+- Experiment with different hidden layer node combinations
 - Adaptive perturbation from larger scale to smaller scale
