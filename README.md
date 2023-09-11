@@ -29,7 +29,7 @@ Sep. 10th:
 
 Summary:
 - benchmarks 
-- more layers to have a benchmark result like accuracy: 70%, 80%
+- more layers to have a benchmark result like accuracy: 70%
 - Training Time: The total time taken for all trials in the "Perturbation" case vary compared to the benchmark. Ex: the 2-layer perturbation model is significantly faster than the benchmark.
 - Accuracy and Loss:  Perturbation technique is at least not significantly worse than the benchmarks.
 
