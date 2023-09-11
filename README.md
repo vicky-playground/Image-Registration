@@ -11,7 +11,7 @@ Sep. 4th:
 - Perturbation logic: Calculate the distance between the initial weights of the previous trial set and the final output weights. Multiply the scale (0.1) to create the +-perturbation range (upper bound and lower bound). After obtaining the upper bound and lower bound, add a new input weight for the next trial set by choosing a random value within the specified range.
 
 ## Benchmark
-# of Layers | Total time taken for all trials | avg. acc. | avg. train loss | avg. test loss | avg. std. train loss | avg. std. test loss
+| # of Layers | Total time taken for all trials | avg. acc. | avg. train loss | avg. test loss | avg. std. train loss | avg. std. test loss |
 ---|---|---|---|---|---|---
 1 | 1921.74 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 
 2 | 1797.44 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 
