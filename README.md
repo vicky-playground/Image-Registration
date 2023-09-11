@@ -12,11 +12,11 @@ Sep. 4th:
 
 ## Benchmark
 # of Layers | Total time taken for all trials | avg. acc. | avg. train loss | avg. test loss | avg. std. train loss | avg. std. test loss
----|---|---|---|---|---|---|
-1 | 1921.74 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 |
-2 | 1797.44 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 |
-3 | 1991.36 | 0.5304 | 1.2152 | 1.3972 | 0.2040 | 0.0435 |
-5 | 2028.03 | 0.5316 | 1.2249 | 1.3935 | 0.2204 | 0.0567 |
+---|---|---|---|---|---|---
+1 | 1921.74 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 
+2 | 1797.44 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 
+3 | 1991.36 | 0.5304 | 1.2152 | 1.3972 | 0.2040 | 0.0435 
+5 | 2028.03 | 0.5316 | 1.2249 | 1.3935 | 0.2204 | 0.0567 
 
 ## Perturbation  
 # of Layers | Total time taken for all trials | avg. acc. | avg. train loss | avg. test loss | avg. std. train loss | avg. std. test loss
