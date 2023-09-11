@@ -33,5 +33,6 @@ Summary:
 
 Next step: 
 - Add epochs
+- Pre-trained CNN such as ResNet-18
 - Experiment with different hidden layer node combinations
 - Adaptive perturbation from larger scale to smaller scale
