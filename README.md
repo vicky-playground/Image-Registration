@@ -28,6 +28,7 @@ Sep. 10th:
 | 5           | **1957.75**                      | 0.5315    | 1.2242          | 1.3920         | 0.2209              | 0.0559              |
 
 Summary:
+- more layers
 - Training Time: The total time taken for all trials in the "Perturbation" case vary compared to the benchmark. Ex: the 2-layer perturbation model is significantly faster than the benchmark.
 - Accuracy and Loss:  Perturbation technique is at least not significantly worse than the benchmarks.
 
