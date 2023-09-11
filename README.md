@@ -28,12 +28,10 @@ Sep. 10th:
 | 5           | **1957.75**                      | 0.5315    | 1.2242          | 1.3920         | 0.2209              | 0.0559              |
 
 Summary:
-- The total time taken for all trials is slightly higher in the perturbation experiments.
-- For both benchmark and perturbation experiments, the 3-layer models exhibit slightly lower average train and test losses compared to the 2-layer models. 
-- The perturbation experiments show very minor changes in the metrics compared to the benchmark experiments. This indicates that the perturbations applied to the weights were relatively small and did not cause significant deviations in the training process.
-- The results are generally consistent between benchmark and perturbation experiments. This suggests that the introduced perturbations did not lead to significant changes in the overall model performance or behavior.
+- Training Time: The total time taken for all trials in the "Perturbation" case vary compared to the benchmark. Ex: the 2-layer perturbation model is significantly faster than the benchmark.
+- Accuracy and Loss:  Perturbation technique is at least not significantly worse than the benchmarks.
 
-Future: 
-- How many nodes? ; 1 layer & 5 layers; variability (quality); 30 trials
+Next step: 
+- Add epochs
 - Experiment with different hidden layer node combinations
 - Adaptive perturbation from larger scale to smaller scale
