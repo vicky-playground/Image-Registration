@@ -5,7 +5,7 @@ Goal:
 - need less running time to get a better/same result when using perturbation to a 2 or so hidden layers only.
 
 
-Sep. 4th:
+Sep. 10th:
 - Define a neural network model with different (1-3, 5) layers.
 - Set training parameters: 10 epochs and 30 trial.
 - Perturbation logic: Calculate the distance between the initial weights of the previous trial set and the final output weights. Multiply the scale (0.1) to create the +-perturbation range (upper bound and lower bound). After obtaining the upper bound and lower bound, add a new input weight for the next trial set by choosing a random value within the specified range.
