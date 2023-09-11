@@ -11,17 +11,20 @@ Sep. 4th:
 - Perturbation logic: Calculate the distance between the initial weights of the previous trial set and the final output weights. Multiply the scale (0.1) to create the +-perturbation range (upper bound and lower bound). After obtaining the upper bound and lower bound, add a new input weight for the next trial set by choosing a random value within the specified range.
 
 ## Benchmark
-- `benchmark_1layer.py`: Total time taken for all trials: 1962.03 seconds; avg. accuracy: 0.5103; avg. train loss: 1.4080; avg. test loss: 1.4476; avg. std. train loss: 0.1366; avg. std. 
- test loss: 0.0413
-- `benchmark_2layers.py`: Total time taken for all trials: 1797.44 seconds; avg. accuracy: 0.5103; avg. train loss: 1.4080; avg. test loss: 1.4476; avg. std. train loss: 0.1366; avg. std. 
- test loss: 0.0413
-- `benchmark_3layers.py`: Total time taken for all trials: 1991.36 seconds; avg. accuracy: 0.5233; avg. train loss: 1.3799; avg. test loss: 1.4162; avg. std. train loss: 0.1580; avg. std. test loss: 0.0503
-- `benchmark_5layers.py`: Total time taken for all trials: 2028.03 seconds; avg. accuracy: 0.5233; avg. train loss: 1.3799; avg. test loss: 1.4162; avg. std. train loss: 0.1580; avg. std. test loss: 0.0503
+# of Layers | Total time taken for all trials | avg. acc. | avg. train loss | avg. test loss | avg. std. train loss | avg. std. test loss
+---|---|---|---|---|---|---|
+1 | 1921.74 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 |
+2 | 1797.44 | 0.3877 | 2.1772 | 2.2148 | 0.1698 | 0.0943 |
+3 | 1991.36 | 0.5304 | 1.2152 | 1.3972 | 0.2040 | 0.0435 |
+5 | 2028.03 | 0.5316 | 1.2249 | 1.3935 | 0.2204 | 0.0567 |
+
 ## Perturbation  
-- `perturbation_1layer.py`: Total time taken for all trials: 1948.14 seconds; avg. accuracy: 0.5094; avg. train loss: 1.4073; avg. test loss: 1.4445; avg. std. train loss: 0.1361; avg. std. test loss: 0.0435 
-- `perturbation_2layers.py`: Total time taken for all trials: 1505.05 seconds; avg. accuracy: 0.5094; avg. train loss: 1.4073; avg. test loss: 1.4445; avg. std. train loss: 0.1361; avg. std. test loss: 0.0435
-- `perturbation_3layers.py`: Total time taken for all trials: 1497.41 seconds; avg. accuracy: 0.5232; avg. train loss: 1.3837; avg. test loss: 1.4172; avg. std. train loss: 0.1579; avg. std. test loss: 0.0527
-- `perturbation_3layers.py`: Total time taken for all trials: 234.55 seconds; avg. accuracy: 0.5232; avg. train loss: 1.3837; avg. test loss: 1.4172; avg. std. train loss: 0.1579; avg. std. test loss: 0.0527 
+# of Layers | Total time taken for all trials | avg. acc. | avg. train loss | avg. test loss | avg. std. train loss | avg. std. test loss
+---|---|---|---|---|---|---|
+1 | **1917.43** | 0.3877 | 2.1772 | 2.2146 | 0.1694 | 0.0951 |
+2 | **1505.05** | **0.5162** | 1.2741 | 1.4319 | 0.1686 | 0.0346 |
+3 | **1497.41** | 0.5294 | 1.2151 | 1.3974 | 0.2040 | 0.0437 |
+5 | **1957.75** | 0.5315 | 1.2242 | 1.3920 | 0.2209 | 0.0559 |
 
 Summary:
 - The total time taken for all trials is slightly higher in the perturbation experiments.
